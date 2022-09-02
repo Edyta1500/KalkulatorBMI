@@ -1,0 +1,26 @@
+body{
+    box-sizing: border-box;
+}
+h1{
+    margin: 0 auto;
+    width: 200px;
+}
+.calculator{
+    width: 200px;
+    margin: 0 auto;
+}
+
+.result{
+    height: 2rem;
+    width: 10rem;
+    border: 1px solid red;
+    margin: 1rem auto;
+    color: red;
+}
+.interpretation{
+    height: 2rem;
+    width: 10rem;
+    border: 1px solid red;
+    margin: 0 auto;
+    color: black;
+}
