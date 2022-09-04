@@ -7,23 +7,55 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Kalkulator BMI</title>
 </head>
+
 <body>
+       
     <header>
+       
         <h1>Kalkulator BMI</h1>
 
 
         <div class="calculator">
+           
             <label  for="weight" >Masa ciała</label><br>
-            <input name="weight" id="weight" maxlength="3" placeholder="kg" autofocus><br>
+            
+            <input name="weight" id="weight" maxlength="3" placeholder="kg" type="number"><br>
+           
             <label for="height" >Wzrost</label><br>
+           
             <input name="height" id="height" maxlength="3" placeholder="cm"><br>
-            <button class="calculate_button">Oblicz BMI</button><br>
+           
+            <button class="calculate_button">Oblicz</button>
+           
             <button class="reset_button">Wyczyść</button>
+           
+            <h2>Twoje BMI wynosi</h2>
+            
             <div class="result"></div>
+           
+            <h2>Interpretacja</h2>
+            
+            <div class="interpretation"></div>
 
+            <div class = "wtd">
+                
+                    <p wtd--wygłodzenie>Wartość wskaźnika BMI mniejsza niż 18.5 kg/m2& oznacza zbyt niską masę ciała w odniesieniu do wzrostu.</p>
+                    <p wtd--wychudzenie>Wartość wskaźnika BMI pomiędzy 17,0 a 18,5 kg/m2& oznacza zbyt niską masę ciała w odniesieniu do wzrostu.</p>
+                    <p wtd--niedowaga>Wartość wskaźnika BMI pomiedzy 18.5 a 24,5 kg/m2& oznacza prawidłową masę ciała w odniesieniu do wzrostu.</p>
+                    <p wtd--norma>Wartość wskaźnika BMI pomiędzy 24,5, a 30 kg/m2& oznacza zbyt wysoką masę ciała w odniesieniu do wzrostu.</p>
+                    <p wtd--nadwaga>Wartość wskaźnika BMI pomiędzy 30 a 35 kg/m2& oznacza nadwagę.</p>
+                    <p wtd--otyloscI>Wartość wskaźnika BMI pomiędzy 30 a 35 kg/m2& oznacza otyłość I-go stopnia.</p>
+                    <p wtd--otyloscII>Wartość wskaźnika BMI pomiędzy 35 a 40 kg/m2& oznacza otyłość II-go stopnia.</p>
+                    <p wtd--otyloscIII>Wartość wskaźnika BMI powyżej 40 kg/m2& oznacza otyłość III-go stopnia.</p>
+                </div>
+            </div>
+            
         </div>
-        <div class="interpretation"></div>
+    
     </header>
+   
     <script src="js/scripts.js"></script>
+
 </body>
+
 </html>
