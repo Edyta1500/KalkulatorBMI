@@ -1,5 +1,6 @@
 'use strict';
 
+
 const btnCalc = document.querySelector('.calculate_button');
 
 const btnReset = document.querySelector('.reset_button');
@@ -31,32 +32,40 @@ const calc = () => {
     resultPlace.innerHTML = result;
 
     
+    for (let i=0; i<=wtdBox.length-1; i++){
 
-    if (result < 16) {
-        interprText.innerHTML = interpr[0];
-        wtdSevereThin.classList.remove('disp-none');
-    } else if (result < 17) {
-        interprText.innerHTML = interpr[1];
-        wtdModerateThin.classList.remove('disp-none');
-    } else if (result < 18.5) {
-        interprText.innerHTML = interpr[2];
-    } else if (result < 24.5) {
-        interprText.innerHTML = interpr[3];
-    } else if (result < 30) {
-        interprText.innerHTML = interpr[4];
-    } else if (result < 35) {
-        interprText.innerHTML = interpr[5];
-    } else if (result < 40) {
-        interprText.innerHTM = interpr[6];
-    } else 
-        {interprText.innerHTML = interpr[7]}
-    
-//  for (i=0; i<wtdBox.length; i++){
-//     if (resutl >0 && result <16) {
+                
+   if (i == 0 && result < 16 && result >= 0) {
+        interprText.innerHTML = interpr[i];
+        wtdBox[i].classList.remove('disp-none');
+    } else if (i == 1 && result >=16 && result < 17) {
+        interprText.innerHTML = interpr[i];
+        wtdBox[i].classList.remove('disp-none');
+    } else if (i == 2 && result >=17 && result < 18.5) {
+        interprText.innerHTML = interpr[i];
+        wtdBox[i].classList.remove('disp-none');
+    } else if (i == 3 && result >=18.5 && result < 24.5) {
+        interprText.innerHTML = interpr[i];
+        wtdBox[i].classList.remove('disp-none');
+    } else if (i == 4 && result >=24.5 && result < 30) {
+        interprText.innerHTML = interpr[i];
+        wtdBox[i].classList.remove('disp-none');
+    } else if (i == 5 && result >=30 && result < 35) {
+        interprText.innerHTML = interpr[i];
+        wtdBox[i].classList.remove('disp-none');
+    } else if (i == 6 && result >=35 && result < 40) {
+        interprText.innerHTML = interpr[i];
+        wtdBox[i].classList.remove('disp-none');
+    } else if (i == 7 && result >=40 ) {
+        interprText.innerHTML = interpr[i];
+        wtdBox[i].classList.remove('disp-none');
+    }else {
+        wtdBox[i].classList.add('disp-none');
+    }
 
-//     }
  }
-       
+}
+     
 
 
 btnCalc.addEventListener('click', calc)
@@ -72,7 +81,9 @@ btnReset.addEventListener('click', () => {
 
     height.value = '';
 
+    for (let i=0; i<=wtdBox.length-1; i++){
+        wtdBox[i].classList.add('disp-none')
+    }
+
     
 })
-
-
