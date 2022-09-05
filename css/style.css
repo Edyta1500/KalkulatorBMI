@@ -34,7 +34,11 @@ h1 {
   width: 200px;
 }
 
-.hidden {
+.disp-flex {
+  display: flex;
+}
+
+.disp-none {
   display: none;
 }
 
