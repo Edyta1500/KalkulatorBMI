@@ -54,7 +54,7 @@ const calc = () => {
         
         weight.classList.add('empty');
 
-    } else if (height.value == '') {
+    } else if (height.value == ''|| height.value <= 0) {
         
         height.classList.add('empty');
     
