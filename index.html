@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,75 +8,81 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="css/style.css">
     <title>Kalkulator BMI</title>
 </head>
 
 <body>
-       
+
     <header>
-       
+
         <h1>Kalkulator BMI</h1>
 
         <div class="calculator">
 
-        
-           
-            <label  for="weight" >Masa ciała</label><br>
-            
-            <input name="weight" id="weight" maxlength="3" placeholder="kg" type="number" min="0"><br>
-           
-            <label for="height" >Wzrost</label><br>
-           
-            <input  name="height" id="height" maxlength="3" placeholder="cm" type="number" min="135" ><br>
-           
-            <button class="calculate_button">Oblicz</button>
-           
-            <button class="reset_button">Wyczyść</button>
-           
-            <h2>Twoje BMI wynosi</h2>
-            
-            <div class="result"></div>
-           
-            <h2>Interpretacja</h2>
-            
-            <div class="interpretation"></div>
 
-            <div class = "wtd">
-                
-                    <div class="wtd__box disp-none wtd--severe-thinness">Wartość wskaźnika BMI mniejsza niż 16  skrajnie zbyt niską masę ciała w odniesieniu do wzrostu.</div>
-                   
-                    <div class="wtd__box disp-none wtd--moderate-thinness">Wartość wskaźnika BMI mniejsza niż 17 oznacza zbyt niską masę ciała w odniesieniu do wzrostu.</div>
-                   
-                    <div class="wtd__box disp-none wtd--mild-thinness">Wartość wskaźnika BMI pomiędzy 17,0 a 18,5 oznacza zbyt niską masę ciała w odniesieniu do wzrostu.    
-                    </div>
-                   
-                    <div class="wtd__box disp-none  wtd--normal">Wartość wskaźnika BMI pomiedzy 18.5 a 24  oznacza prawidłową masę ciała w odniesieniu do wzrostu.
-                    </div>
-                   
-                    <div class="wtd__box disp-none wtd--overweight">Wartość wskaźnika BMI pomiędzy 24 a 30  oznacza nadwagę, czyli za dużą masę ciała w stosunku do wzrostu. Należy wdrożyć działania naprawcze</div>
-                   
-                    <div class="wtd__box disp-none wtd--obeseI">Wartość wskaźnika BMI pomiędzy 30 a 35  oznacza otyłość I-go stopnia
-                    </div>
-                    
-                    <div class="wtd__box disp-none wtd--obeseII">Wartość wskaźnika BMI pomiędzy 35 a 40  oznacza otyłość II-go stopnia.
-                    </div>
-                    
-                    <div class="wtd__box disp-none wtd--obeseIII">Wartość wskaźnika BMI powyżej 40 oznacza otyłość III-go stopnia   
-                    </div>
-                    
-                    <div class="wtd__box disp-none">Kalkulator nie nadaje się do oceniania masy ciała u dzieci.
-                    </div>
-                   
-                </div>
+
+            <label  for="weight">Masa ciała</label><br>
+
+            <input  name="weight" id="weight" maxlength="3" placeholder="kg" type="number" min="0"><br>
+
+            <label  for="height">Wzrost</label><br>
+
+            <input name="height" id="height" maxlength="3" placeholder="cm" type="number" min="135"><br>
+
+            <button class="calculate_button">Oblicz</button>
+
+            <button class="reset_button">Wyczyść</button>
+
+            <h2>Twoje BMI wynosi</h2>
+
+            <div class="result text"></div>
+
+            <h2>Interpretacja</h2>
+
+            <div class="interpretation text"></div>
+        </div>
+        <div class="wtd">
+
+            <div class="wtd__box disp-none wtd--severe-thinness">Wartość wskaźnika BMI mniejsza niż 16 skrajnie zbyt
+                niską masę ciała w odniesieniu do wzrostu.</div>
+
+            <div class="wtd__box disp-none wtd--moderate-thinness">Wartość wskaźnika BMI mniejsza niż 17 oznacza zbyt
+                niską masę ciała w odniesieniu do wzrostu.</div>
+
+            <div class="wtd__box disp-none wtd--mild-thinness">Wartość wskaźnika BMI pomiędzy 17,0 a 18,5 oznacza zbyt
+                niską masę ciała w odniesieniu do wzrostu.
             </div>
+
+            <div class="wtd__box disp-none  wtd--normal">Wartość wskaźnika BMI pomiedzy 18.5 a 24 oznacza prawidłową
+                masę ciała w odniesieniu do wzrostu.
+            </div>
+
+            <div class="wtd__box disp-none wtd--overweight">Wartość wskaźnika BMI pomiędzy 24 a 30 oznacza nadwagę,
+                czyli za dużą masę ciała w stosunku do wzrostu. Należy wdrożyć działania naprawcze</div>
+
+            <div class="wtd__box disp-none wtd--obeseI">Wartość wskaźnika BMI pomiędzy 30 a 35 oznacza otyłość I-go
+                stopnia
+            </div>
+
+            <div class="wtd__box disp-none wtd--obeseII">Wartość wskaźnika BMI pomiędzy 35 a 40 oznacza otyłość II-go stopnia.
+            </div>
+            <div class="wtd__box disp-none wtd--obeseIII">Wartość wskaźnika BMI pomiędzy powyżej 40 oznacza otyłość III-go stopnia.
+            </div>
+            <div class="wtd__box disp-none">Kalkulator nie nadaje się do oceniania masy ciała u dzieci.
+            </div>
+
             
+
+        </div>
+
+
+
         
-    </div>
-    
+
     </header>
-   
+
     <script src="js/scripts.js"></script>
 
 </body>

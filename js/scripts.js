@@ -17,7 +17,7 @@ const height = document.querySelector('#height');
 
 
 
-const interpr = ["wygłodzenie", "wychudzenie", "niedowaga", "waga prawidłowa", "nadwaga", "otyłość I-go stopnia", "otyłość II-go stopnia", "otyłość III-go stopnia", "jesteś człowiekiem?"]
+const interpr = ["wygłodzenie", "wychudzenie", "niedowaga", "waga prawidłowa", "nadwaga", "otyłość I-go stopnia", "otyłość II-go stopnia", "otyłość III-go stopnia", "człowieki tak nie rosną"]
 
 const points = [0, 16, 17, 18, 24, 30, 35, 40, 200];
 
@@ -29,6 +29,7 @@ const calc = () => {
         const result = (Math.round(parseInt(weight.value) / Math.pow((parseInt(height.value) * .01), 2), (2)));
 
         resultPlace.innerHTML = result;
+       
         for (let i = 0; i < points.length - 2; i++) {
 
             if (result >= points[i] && result < points[i + 1]) {
@@ -36,8 +37,11 @@ const calc = () => {
                 interprText.innerHTML = interpr[i];
 
                 wtdBox[i].classList.remove('disp-none');
+              
                 wtdBox[i].classList.add('disp-flex');
+               
                 weight.classList.remove('empty');
+               
                 height.classList.remove('empty');
 
             } else {
@@ -67,7 +71,9 @@ const calc = () => {
         resultPlace.innerHTML = '';
 
     } else {
+        
         weight.classList.add('empty');
+       
         height.classList.add('empty');
     }
 
