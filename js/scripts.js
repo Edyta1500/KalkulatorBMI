@@ -64,7 +64,7 @@ const calc = () => {
        
         resultPlace.innerHTML = '';
 
-    } else if (height.value <= 135) {
+    } else if (height.value <= 135 && height.value > 0) {
         
         wtdBox[wtdBox.length - 1].classList.remove('disp-none');
        
