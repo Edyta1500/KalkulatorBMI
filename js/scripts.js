@@ -1,6 +1,6 @@
 'use strict';
 
-//Zmienne
+
 const btnCalc = document.querySelector('.calculate_button');
 
 const btnReset = document.querySelector('.reset_button');
@@ -15,35 +15,64 @@ const weight = document.querySelector('#weight');
 
 const height = document.querySelector('#height');
 
-//tablice
 
-const interpr = ["wygłodzenie", "wychudzenie", "niedowaga", "waga prawidłowa", "nadwaga", "otyłość I-go stopnia", "otyłość II-go stopnia", "otyłość III-go stopnia"]
 
-const points = [0, 16, 17, 18.5, 24.5, 30, 35, 40, 200];
+const interpr = ["wygłodzenie", "wychudzenie", "niedowaga", "waga prawidłowa", "nadwaga", "otyłość I-go stopnia", "otyłość II-go stopnia", "otyłość III-go stopnia", "jesteś człowiekiem?"]
 
-//funkcje
+const points = [0, 16, 17, 18, 24, 30, 35, 40, 200];
+
 
 const calc = () => {
 
-    const result = (Math.round(parseInt(weight.value) / Math.pow((parseInt(height.value) * .01), 2), (2)));
+    if (weight.value > 0 && weight.value !== '' && height.value > 135 && height.value < 280 && height.value !== '') {
 
-    resultPlace.innerHTML = result;
+        const result = (Math.round(parseInt(weight.value) / Math.pow((parseInt(height.value) * .01), 2), (2)));
 
-    for (let i = 0; i < points.length - 1; i++) {
-        
-        if (result >= points[i] && result < points[i + 1]) {
-           
-            interprText.innerHTML = interpr[i];
-            
-            wtdBox[i].classList.remove('disp-none');
+        resultPlace.innerHTML = result;
+        for (let i = 0; i < points.length - 2; i++) {
 
-        } else {
+            if (result >= points[i] && result < points[i + 1]) {
 
-            wtdBox[i].classList.add('disp-none');
+                interprText.innerHTML = interpr[i];
+
+                wtdBox[i].classList.remove('disp-none');
+                wtdBox[i].classList.add('disp-flex');
+                weight.classList.remove('empty');
+                height.classList.remove('empty');
+
+            } else {
+
+                wtdBox[i].classList.add('disp-none');
+            }
         }
+
+    } else if (weight.value == '' || weight.value <0 ) {
+        
+        weight.classList.add('empty');
+
+    } else if (height.value == '') {
+        
+        height.classList.add('empty');
+    
+    } else if (height.value >= 280) {
+       
+        interprText.innerHTML = interpr[interpr.length - 1];
+       
+        resultPlace.innerHTML = '';
+
+    } else if (height.value <= 135) {
+        
+        wtdBox[wtdBox.length - 1].classList.remove('disp-none');
+       
+        resultPlace.innerHTML = '';
+
+    } else {
+        weight.classList.add('empty');
+        height.classList.add('empty');
     }
 
 }
+
 
 const reset = () => {
 
@@ -55,33 +84,41 @@ const reset = () => {
 
     height.value = '';
 
+    weight.classList.remove('empty');
+
+    height.classList.remove('empty');
+
     for (let i = 0; i <= wtdBox.length - 1; i++) {
-       
+
         wtdBox[i].classList.add('disp-none');
     }
 }
 
 
-const clear = () => {
-   
+const clearRes = () => {
+
     resultPlace.innerHTML = '';
-   
+
     interprText.innerHTML = '';
-   
+
+    weight.classList.remove('empty');
+
+    height.classList.remove('empty');
+
     for (let i = 0; i <= wtdBox.length - 1; i++) {
-       
+
         wtdBox[i].classList.add('disp-none');
     }
 
 };
-//nasłuchiwacze zdarzeń
+
 
 btnCalc.addEventListener('click', calc);
 
 btnReset.addEventListener('click', reset);
 
-weight.addEventListener('input', clear);
+weight.addEventListener('input', clearRes);
 
-height.addEventListener('input', clear);
+height.addEventListener('input', clearRes);
 
 
