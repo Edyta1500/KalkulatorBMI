@@ -30,7 +30,7 @@ const calc = () => {
 
         resultPlace.innerHTML = result;
        
-        for (let i = 0; i < points.length - 2; i++) {
+        for (let i = 0; i < points.length - 1; i++) {
 
             if (result >= points[i] && result < points[i + 1]) {
 
