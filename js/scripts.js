@@ -19,14 +19,14 @@ const height = document.querySelector('#height');
 
 const interpr = ["wygłodzenie", "wychudzenie", "niedowaga", "waga prawidłowa", "nadwaga", "otyłość I-go stopnia", "otyłość II-go stopnia", "otyłość III-go stopnia", "człowieki tak nie rosną"]
 
-const points = [0, 16, 17, 18, 24, 30, 35, 40, 200];
+const points = [0, 16, 17, 18.5, 24.5, 30, 35, 40, 200];
 
 
 const calc = () => {
 
     if (weight.value > 0 && weight.value !== '' && height.value > 135 && height.value < 280 && height.value !== '') {
 
-        const result = (Math.round(parseInt(weight.value) / Math.pow((parseInt(height.value) * .01), 2), (2)));
+        const result = (parseFloat(weight.value) / Math.pow((parseFloat(height.value) * .01), 2)).toFixed(2);
 
         resultPlace.innerHTML = result;
        
