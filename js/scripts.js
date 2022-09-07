@@ -11,6 +11,7 @@ const interprText = document.querySelector('.interpretation');
 
 const wtdBox = document.querySelectorAll('.wtd__box');
 
+
 const weight = document.querySelector('#weight');
 
 const height = document.querySelector('#height');
@@ -26,7 +27,7 @@ const calc = () => {
 
     if (weight.value > 0 && weight.value !== '' && height.value > 135 && height.value < 280 && height.value !== '') {
 
-        const result = (parseFloat(weight.value) / Math.pow((parseFloat(height.value) * .01), 2)).toFixed(2);
+        const result = (parseFloat(weight.value.replace(',','.')) / Math.pow((parseFloat(height.value.replace(',','.')) * .01), 2)).toFixed(2);
 
         resultPlace.innerHTML = result;
        

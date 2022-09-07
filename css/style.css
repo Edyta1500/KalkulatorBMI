@@ -46,19 +46,15 @@ h1 {
 }
 
 .wtd {
-  width: 100%;
   position: absolute;
   display: flex;
   top: 35rem;
-  text-align: center;
 }
 
 .wtd__box {
-  position: absolute;
   margin: 2rem;
   padding: 1rem;
   font-size: 2rem;
-  width: 70%;
 }
 
 .text {

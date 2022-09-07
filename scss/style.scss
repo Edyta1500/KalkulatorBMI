@@ -12,7 +12,6 @@ body {
 
 header {
   display: flex;
-
   position: relative;
   width: 100%;
   justify-content: center;
@@ -24,7 +23,6 @@ header {
 h1 {
   position: absolute;
   font-size: 5rem;
-
   margin: 1.5rem;
 }
 
@@ -50,19 +48,19 @@ h1 {
 }
 
 .wtd{
-  width: 100%;
+  
   position:absolute;
   display: flex;
   top: 35rem;
-  text-align: center;
+  
 }
 
 .wtd__box {
-  position: absolute;
+ 
   margin: 2rem;
   padding: 1rem;
   font-size: 2rem;
-  width: 70%;
+ 
 
   
   
